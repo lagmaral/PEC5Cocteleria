@@ -1,0 +1,42 @@
+.view-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+
+  .cocktail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .table-container {
+    margin: 16px;
+  }
+
+  .spinner-container {
+    display: flex;                  /* Usamos flexbox */
+    justify-content: center;        /* Centrado horizontal */
+    align-items: center;            /* Centrado vertical */
+    position: fixed;                /* Fijamos el spinner */
+    top: 0;
+    left: 0;
+    width: 100%;                    /* Ocupa toda la pantalla */
+    height: 100%;                   /* Ocupa toda la pantalla */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1000;                  /* Asegura que el spinner esté por encima de otros elementos */
+  }
+
+
+  .list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .list-item {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+  }

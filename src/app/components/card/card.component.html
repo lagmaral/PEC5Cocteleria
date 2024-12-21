@@ -1,0 +1,7 @@
+<mat-card class="card" *ngIf="cocktail">
+
+    <img mat-card-image [src]="cocktail.strDrinkThumb+ '/preview'" alt="{{ cocktail.strDrink }}" class="cocktail-img max-size" />
+    <mat-card-title>{{ cocktail.name }}</mat-card-title>
+    <mat-card-subtitle>{{ cocktail.strInstructionsES }}</mat-card-subtitle>
+
+  </mat-card>

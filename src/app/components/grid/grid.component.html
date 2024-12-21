@@ -1,0 +1,28 @@
+<mat-table [dataSource]="data" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="thumbnail">
+      <mat-header-cell *matHeaderCellDef> Imagen </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <img [src]="element.strDrinkThumb" alt="{{ element.strDrink }}" height="50" class="circular-image"/>
+      </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <a (click)="rowClick.emit(element.id)">{{ element.strDrink }}</a>
+      </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Instrucciones </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.strInstructionsES }}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClick.emit(row.strDrink)"></mat-row>
+  </mat-table>
