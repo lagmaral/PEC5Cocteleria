@@ -1,4 +1,4 @@
-<mat-table [dataSource]="data" class="mat-elevation-z8">
+<mat-table [dataSource]="data" class="mat-elevation-z8"   [@tableAnimation]="data.length">
 
     <ng-container matColumnDef="thumbnail">
       <mat-header-cell *matHeaderCellDef> Imagen </mat-header-cell>
